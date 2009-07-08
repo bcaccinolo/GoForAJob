@@ -1,0 +1,21 @@
+
+<%= render :partial => "search_field", :locals => { :source => "main" }  %>
+
+<% @categories.each  do |category| %>
+
+  <div class="category">
+  
+  <h2><%= link_to category.name.t, jobs_category_url(category.id) %> 
+  		<%= link_to "(rss)", jobs_category_url(:id => category.id, :format => "rss") %> 
+</h2>
+
+  <ul class="job_list" id="cat<%= category.id %>_job_list">
+    <%= render :partial => category.last_jobs(Locale.language_code) %>
+  </ul>
+
+  </div>
+
+<% end %>
+
+<%= link_to "Recent Jobs RSS", :action => "index", :format => "rss" %>
+

@@ -1,0 +1,37 @@
+
+<H1>ENGLISH (<%= @en_view_translations.size %>) </H1>
+  <% @en_view_translations.each do |tr| -%> 
+    <%= render :partial => 'translation_form', :locals => {:tr => tr} %> 
+    <hr>
+  <% end -%>
+
+
+<h1>FRANCAIS (<%= @fr_view_translations.size %>)</h1>
+  <% @fr_view_translations.each do |tr| -%> 
+    <%= render :partial => 'translation_form', :locals => {:tr => tr} %> 
+    <hr>
+  <% end -%>
+
+<hr>
+
+
+
+
+
+<p>Just here to generate the entry in the translation table:</p>
+<%
+Locale.set 'en-US'
+all_cat = Category.find(:all)
+all_cat.each do |cat| %>
+  <%=   cat.name.t %>
+<% end %>
+
+<br>
+
+<%
+Locale.set 'fr-FR'
+all_cat = Category.find(:all)
+all_cat.each do |cat| %>
+  <%=   cat.name.t %>
+<% end %>
+

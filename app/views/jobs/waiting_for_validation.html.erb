@@ -1,0 +1,9 @@
+
+<% @jobs.each do |job| %>
+
+<%= render :partial => "job_full", :locals => { :job => job } %>
+<%= link_to "Delete", url_for(job),  { :confirm => "Want to delete this offer?", :method => :delete} %>
+| <%= link_to "Validate", validate_job_url(job), { :confirm => "Want to validate this offer?" } %>
+| <%= link_to "Edit", edit_job_url(job) %>
+
+<% end %>

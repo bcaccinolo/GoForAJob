@@ -1,0 +1,161 @@
+/ = Constants =
+
+/ METRICS
+!main_width = 500px
+
+/ COLORS
+!gray = #666666
+!rose = #FD40A2
+
+!blue1 = #D8DEEA
+!blue2 = #6080A8
+!blue3 = #3B5999
+
+/ FONT SIZE
+!font_little = 10px
+!font_normal = 12px
+!font_big = 22px
+
+/ General settings
+body
+  :font-family "Lucida Grande",arial,sans-serif
+    
+  :background url(/images/topbluefade.gif) repeat-x
+  :margin 0  
+  .container
+    :width 800px
+    :margin 0 auto 0 auto  
+    a
+      :color = !gray
+    h2
+      :background-color #F7F5E7
+      :border 2px solid #F0EDDA
+      :padding 2px
+      a
+        :text-decoration none
+        :color rgb(51, 153, 51)
+        &:hover
+          :text-decoration underline
+      span
+        :color rgb(51, 153, 51)
+      span#at
+        :color = !gray
+    .search
+      :text-align center
+      form
+        :margin 0
+        :padding 0
+        input#search_field
+          :border-right 2px solid #DDDDDD
+          :border-bottom 2px solid #DDDDDD
+          :width 300px
+          :padding 5px
+          :font-size 18px
+      
+      p 
+        :margin 0
+        :padding 0
+        
+        
+      / p.title
+      
+      p.example
+        :font-size = !font_normal
+        :color = !gray
+          
+          
+        
+
+    
+p#desc
+  :width 400px
+
+.job_list
+  :margin 0
+  :padding 0
+  li
+    :list-style-type none
+    :padding 5px
+    :margin 0
+  li.shade
+    :background-color #edf3fe
+
+    
+/ HEADER
+body 
+  .container .header
+    :border-bottom 1px dotted #ccc
+    :margin-top 0px
+    :padding-bottom 10px
+    .top-bar
+      :text-align right
+      :font-size 10px
+    h1
+      :margin 0
+      a
+        :color black
+        :text-decoration none
+        &:hover
+          :color white
+          :background black
+    p
+      :margin 0
+    a.right_link
+      :color black
+      :text-align center
+      :float right
+      :margin 15px 50px 0 0
+      span
+        :padding 1px        
+      span.link
+        :background yellow
+      span.free
+        :background red
+        :color white
+      &:hover
+        span
+          :background black
+          :color white  
+        span.free
+          :color red
+
+/ FOOTER
+body .container .footer
+  :border-top 1px dotted #ccc
+  :margin-top 20px
+  :text-align center
+  :color #666666
+  :font-size 12px
+  a
+    :color black
+    
+
+/ NEW JOB PART
+.container .signup
+  h2.title
+    :font-size 28px
+    :color rgb(51, 153, 51)
+    :border none
+    :border-bottom 2px solid rgb(51, 153, 51)
+    :background-color #fff
+  .new_job
+    b, p
+      :margin 0
+    p
+      :margin 20px 0 2px 0
+    input, textarea
+      :width 400px
+    .fieldWithErrors
+      input, textarea
+        :border 2px solid red
+    
+  #errorExplanation.errorExplanation
+    :border 2px solid #C6064F
+    :background-color #F38383  
+    h2
+      :margin-top 0
+      :background-color yellow
+    
+    
+
+      

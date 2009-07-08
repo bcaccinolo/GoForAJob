@@ -1,0 +1,35 @@
+
+  <p>
+    <b><%= "TR_Company".t %></b><br />
+    <%= f.text_field :company %>
+  </p>
+
+  <p>
+    <b><%= "TR_Url".t %></b><br />
+    <%= f.text_field :url %>
+  </p>
+
+  <p>
+    <b><%= "TR_Title".t %></b><br />
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <b><%= "TR_Location".t %></b><br />
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <b><%= "TR_Category".t %></b><br />
+    <%= select("job", "category_id", Category.find(:all).map {|c| [c.name.t, c.id] }) %>
+  </p>
+
+  <p>
+    <b><%= "TR_Description".t %></b><br />
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <b><%= "TR_Instructions".t %></b><br />
+    <%= f.text_field :instructions %>
+  </p>

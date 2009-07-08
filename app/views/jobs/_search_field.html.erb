@@ -1,0 +1,15 @@
+<div class="search">
+  
+  <p class="title"><%= "TR_Live Search:".t  %></p>
+
+  <% form_remote_tag :url => search_jobs_url(:source => source), :method => :get do -%>
+  <%= 
+  text_field("search", "request", "size" => 20, 'id' => "search_field")
+  %> 
+  <% end -%>
+
+  <p class="example"><%= "TR_Live Search Eample".t %></p>
+
+  <%= observe_field "search_field", :url => search_jobs_url(:source => source), :with => "request", :frequency => 3, :method => :get %>
+
+</div>

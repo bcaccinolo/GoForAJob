@@ -1,0 +1,35 @@
+<div class="signup">
+
+<h2 class="title"><%= "TR_Preview of your Job Offer".t %></h2>
+
+<%= render :partial => "job_full", :locals => { :job => @job } %>
+
+<% form_for(@job, :url => { :action => :new }) do |f| %>
+  <%= f.hidden_field :company %>
+  <%= f.hidden_field :url %>
+  <%= f.hidden_field :title %>  
+  <%= f.hidden_field :location %>
+  <%= f.hidden_field :category_id %>
+  <%= f.hidden_field :description %>
+  <%= f.hidden_field :instructions %>
+
+  <p>
+    <%= f.submit "TR_Modify this job offer".t %>
+  </p>
+<% end %>
+
+
+<% form_for(@job) do |f| %>
+  <%= f.hidden_field :company %>
+  <%= f.hidden_field :url %>
+  <%= f.hidden_field :title %>  
+  <%= f.hidden_field :location %>
+  <%= f.hidden_field :category_id %>
+  <%= f.hidden_field :description %>
+  <%= f.hidden_field :instructions %>
+
+  <p>
+    <%= f.submit "TR_his offer is ok, send it to validation".t %>
+  </p>
+<% end %>
+</div>

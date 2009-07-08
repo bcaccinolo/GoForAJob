@@ -1,0 +1,8 @@
+
+<%= render :partial => "jobs/search_field", :locals => { :source => @category.id }  %>
+
+<h2><span><%= @category.name.t %></span></h2>
+
+<ul class="job_list" id="cat<%= @category.id %>_job_list">
+<%= render :partial => @jobs %>
+</ul>

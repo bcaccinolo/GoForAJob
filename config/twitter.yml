@@ -1,0 +1,10 @@
+development:
+  login: goforajob
+  password: fightclub
+test:
+  login: mylogin
+  password: mypassword
+production:
+  login: goforajob
+  password: fightclub
+

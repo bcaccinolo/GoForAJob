@@ -1,0 +1,7 @@
+
+<%= render :partial => "job_full", :locals => { :job => @job } %>
+
+
+<p>Go to : <%= link_to "#{"TR_All".t} #{@job.category.name.t}", jobs_category_url(@job.category_id) %>, 
+  <%= link_to "TR_All jobs".t, jobs_url %></p>
+

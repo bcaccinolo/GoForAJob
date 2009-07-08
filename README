@@ -1,0 +1,34 @@
+
+= Install / Dependencies
+
+gems 
+  haml
+  ferret
+
+create the file config/database.yml from the example file config/database.example
+
+rake globalize:setup
+rake db:migrate
+rake db:fixtures:load
+
+
+= Notes
+
+The translation interface is at the url : http://localhost:3000/admin/translate
+The validation  interface is at the url : http://localhost:3000/jobs/waiting_for_validation
+
+= Changelog
+
+== Revision : 1004 - 2008-02-06
+ * adding the general usage conditions
+== Version 0.0.1 - 2007-12-11
+ * first test deploy
+
+
+= Notes for the future
+
+* put an authentication on the admin part
+* thinking_sphinx is a great plugin to use the sphynx fulltext engine.
+
+
+

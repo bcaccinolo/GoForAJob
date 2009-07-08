@@ -1,0 +1,20 @@
+
+<p>
+  <b><%= "TR_Location".t %>:</b>
+  <%= job.location %>
+</p>
+
+<p>
+  <b><%= "TR_Url".t %>:</b>
+  <%= job.url %>
+</p>
+
+<p id=desc>
+  <b><%= "TR_Description".t %>:</b><br>
+  <%= job.description.gsub /\r\n/, "<br>" %>
+</p>
+
+<p>
+  <b><%= "TR_To apply".t %>:</b><br>
+  <%= job.instructions %>
+</p>

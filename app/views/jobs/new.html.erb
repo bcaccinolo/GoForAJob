@@ -1,0 +1,14 @@
+<div class="signup">
+<h2 class="title"><%= "TR_New job".t %></h2>
+
+<%= error_messages_for :job %>
+
+<% form_for(@job, :url => { :action => :preview } ) do |f| %>
+
+<%= render :partial => "form", :locals => { :f => f } %>
+
+  <p>
+    <%= f.submit "TR_Post this job offer".t %>
+  </p>
+<% end %>
+</div>

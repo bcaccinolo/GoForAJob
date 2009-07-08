@@ -1,0 +1,14 @@
+<h1>Editing job</h1>
+
+<%= error_messages_for :job %>
+
+<% form_for(@job) do |f| %>
+
+<%= render :partial => "form", :locals => { :f => f } %>
+
+<p>
+  <%= f.submit "Update" %>
+</p>
+
+<% end %>
+

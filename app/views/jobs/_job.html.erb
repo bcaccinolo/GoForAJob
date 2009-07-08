@@ -1,0 +1,8 @@
+
+<li class="<%= cycle("shade", "") %>">
+      <%=h job.location %>
+      : <%= link_to job.title, job %>
+      at <%=h job.company %>
+    <%# =  link_to 'E', edit_job_path(job) %>
+    <%# =  link_to 'X', job, :confirm => 'Are you sure?', :method => :delete %>
+</li>
